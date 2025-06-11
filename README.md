@@ -20,5 +20,4 @@ You can:
 - Light social layer (add friends, see their stuff)
 
 ---
-
-## Still early days — stay tuned 🚧
+ **Still early days!!!**
