@@ -1,3 +1,4 @@
+import SignInButton from "@/features/auth/components/sign-in-btn";
 import { Button } from "@/shared/components/shadcn/button";
 
 
@@ -11,9 +12,7 @@ export default function Landing() {
           </p>
         </div>
         <div>
-          <Button>
-            Sign in
-          </Button>
+          <SignInButton/>
         </div>
       </header>
     </main>
