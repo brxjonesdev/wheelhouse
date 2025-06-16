@@ -11,6 +11,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+//BetterAuth models
 model User {
   id            String    @id
   name          String
@@ -69,4 +70,13 @@ model Verification {
   updatedAt  DateTime?
 
   @@map("verification")
+}
+
+// Wheelhouse models
+
+model Profile {
+  id         String   @id
+  userId      String   @unique
+  OAuthId   String?    @unique
+  
 }
