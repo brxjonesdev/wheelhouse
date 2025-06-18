@@ -11,14 +11,14 @@ import React from 'react';
 export default function UserFeed() {
   const posts = [];
   return (
-    <Card className="flex-1 shadow-none w-full">
-      <CardHeader>
+    <Card className="flex-1 shadow-none w-full pb-0 gap-2">
+      <CardHeader className='pb-0'>
         <CardTitle>What&apos;s new!</CardTitle>
         <CardDescription className="text-sm text-gray-500">
           Your feed of posts, music recommendations, and crate updates.
         </CardDescription>
       </CardHeader>
-      <CardContent className="flex flex-col gap-4 h-full">
+      <CardContent className="flex flex-col gap-4 h-full p-2">
         {posts.length === 0 ? (
           <EmptyFeed />
         ) : (
