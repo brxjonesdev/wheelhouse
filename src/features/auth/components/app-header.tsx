@@ -1,9 +1,11 @@
+'use client';
 import React from 'react';
+import { Button } from '@/shared/components/shadcn/button';
+import useSupabaseAuth from '../use-auth';
+import WheelhouseAvatar from './profile-signin';
 
-
-export default async function AppHeader() {
-
-
+export default function AppHeader() {
+  const { user, loading, handleSignIn, handleSignOut } = useSupabaseAuth();
 
   return (
     <header className="flex flex-row items-center justify-between w-full max-w-6xl mx-auto p-4 rounded-b-xl">
@@ -12,8 +14,19 @@ export default async function AppHeader() {
           Wheelhouse
         </p>
       </div>
+      {!loading && user ? (
+        <WheelhouseAvatar user={user} onSignOut={handleSignOut}/>
+      ) : (
+        <Button
+          onClick={handleSignIn}
+          disabled={loading}
+          size={'sm'}
+          variant={'outline'}
+          className="font-semibold tracking-wider shadow-none"
+        >
+          {loading ? 'Loading...' : 'Sign In'}
+        </Button>
+      )}
     </header>
   );
 }
-
-

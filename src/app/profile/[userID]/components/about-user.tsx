@@ -28,7 +28,8 @@ export default function AboutUser({ userID }: { userID: string }) {
             </h1>
             <p className="text-xs text-muted-foreground">@ireneRedVelvet</p>
             <p className="text-sm text-muted-foreground hidden lg:block mt-1 max-w-[450px]">
-              Known as the member and leader of the South Korean girl group Red Velvet, and its sub-unit Red Velvet – Irene & Seulgi.
+              Known as the member and leader of the South Korean girl group Red Velvet,
+              and its sub-unit Red Velvet – Irene & Seulgi.
             </p>
           </div>
           {/* Now Playing Card */}

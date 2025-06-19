@@ -20,11 +20,8 @@ export default function Profile() {
         <Crates />
         <Playlists />
       </section>
-      <footer className='bg-black mt-10 max-w-6xl mx-auto'>
-        <div className="max-w-6xl mx-auto px-4 py-2 text-center text-gray-500">
-        
-        </div>
-
+      <footer className="bg-black mt-10 max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto px-4 py-2 text-center text-gray-500"></div>
       </footer>
     </main>
   );

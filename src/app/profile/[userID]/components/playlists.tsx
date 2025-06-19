@@ -1,11 +1,7 @@
 import React from 'react';
-import {
-  Card,
-  CardContent,
-  CardFooter,
-} from '@/shared/components/shadcn/card';
+import { Card, CardContent, CardFooter } from '@/shared/components/shadcn/card';
 
-import { Package, Clock } from "lucide-react"
+import { Package, Clock } from 'lucide-react';
 export default function Playlists() {
   return (
     <section className="space-y-2">
@@ -17,9 +13,12 @@ export default function Playlists() {
           <div className="mb-4 rounded-full bg-muted p-4">
             <Package className="h-8 w-8 text-muted-foreground" />
           </div>
-          <h3 className="mb-2 text-lg font-semibold font-heading tracking-wide">Playlists Coming Soon</h3>
+          <h3 className="mb-2 text-lg font-semibold font-heading tracking-wide">
+            Playlists Coming Soon
+          </h3>
           <p className="text-sm text-muted-foreground max-w-sm">
-            We&apos;re working hard to bring you the Playlists feature. Stay tuned for updates!
+            We&apos;re working hard to bring you the Playlists feature. Stay tuned for
+            updates!
           </p>
         </CardContent>
         <CardFooter className="justify-center">
@@ -30,5 +29,5 @@ export default function Playlists() {
         </CardFooter>
       </Card>
     </section>
-  )
+  );
 }

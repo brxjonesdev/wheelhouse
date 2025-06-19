@@ -1,10 +1,13 @@
 ### Wheelhouse
 
-I wanted to bring back the soul of the mixtape era, where sharing music felt personal, thoughtful, and creative.
-This project is my attempt to reimagine playlists as living, expressive artifacts — part blog, part collage, part conversation. 
-It’s built for people who want to show what music means to them, connect over shared tastes, and tell stories through songs.
+I wanted to bring back the soul of the mixtape era, where sharing music felt personal,
+thoughtful, and creative. This project is my attempt to reimagine playlists as living,
+expressive artifacts — part blog, part collage, part conversation. It’s built for people
+who want to show what music means to them, connect over shared tastes, and tell stories
+through songs.
 
 #### Planned Features
+
 - Expressive Playlists – Customize playlists with colors, moods, text, and custom covers
 - Friends & Compatibility – Add friends, compare tastes, and recommend tracks
 - Mixtapes – Curated collections created by the community
@@ -15,4 +18,5 @@ It’s built for people who want to show what music means to them, connect over 
 - Taste Compatibility – Calculate and compare musical taste overlap
 
 #### Built with
+
 This project is built with NextJS, Typescript, Tailwind, Postgres, Auth.js
