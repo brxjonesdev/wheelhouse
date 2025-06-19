@@ -1,6 +1,6 @@
 'use client';
-import Collage from '@/features/homepage/components/collage';
-import FeedDisplay from '@/features/homepage/components/feed-display';
+import Collage from '@/app/home/components/collage';
+import FeedDisplay from '@/app/home/components/feed-display';
 import Notifications from '@/features/notifications/components/notifications';
 import { useDefaultTabRedirect } from '@/utils/navigation';
 

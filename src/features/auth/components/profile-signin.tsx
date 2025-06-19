@@ -16,7 +16,7 @@ export default function WheelhouseAvatar({ user, onSignOut }: { user: User, onSi
     <Popover>
       <PopoverTrigger asChild className="cursor-pointer">
         <Avatar className="w-12 h-12 rounded-lg shadow-2xs">
-          <AvatarImage src={user.user_metadata.avatar_url || "/placeholder.svg"} alt="User Avatar" />
+          <AvatarImage src={user.user_metadata.avatar_url || "/placeholder.svg"} alt="User Avatar" className='object-cover' />
           <AvatarFallback>{user.user_metadata.full_name?.charAt(0)}</AvatarFallback>
         </Avatar>
       </PopoverTrigger>
