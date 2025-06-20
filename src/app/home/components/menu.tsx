@@ -1,48 +1,43 @@
-import { Card, CardContent } from '@/shared/components/shadcn/card';
-import React from 'react';
-import MenuItem from './menu-item';
-import { Archive, DiscAlbum, Shuffle } from 'lucide-react';
-import { Separator } from '@/shared/components/shadcn/separator';
+import { Menubar, MenubarContent, MenubarItem, MenubarMenu, MenubarTrigger } from "@/shared/components/shadcn/menubar"
+import { Archive, DiscAlbum, Shuffle } from "lucide-react"
 
 export default function Menu() {
   const menuOptions = [
     {
-      label: 'Compare Orbits',
-      description: 'Compare music tastes with friends',
+      label: "Compare Orbits",
+      description: "Compare music tastes with friends",
       icon: <Shuffle className="h-4 w-4" />,
     },
     {
-      label: 'RecBin',
-      description: 'Send and receive song recommendations',
+      label: "RecBin",
+      description: "Send and receive song recommendations",
       icon: <Archive className="h-4 w-4" />,
     },
     {
-      label: 'Crates',
-      description: 'Discover community-curated collections',
+      label: "Crates",
+      description: "Discover community-curated collections",
       icon: <DiscAlbum className="h-4 w-4" />,
     },
-  ];
+  ]
 
   return (
-    <section className="w-4/12">
-      <Card className="shadow-none p-0">
-        <CardContent className="p-2 ">
-          <div className="flex flex-col gap-2">
-            {menuOptions.map((option, index) => (
-              <>
-                <MenuItem
-                  key={index}
-                  label={option.label}
-                  description={option.description}
-                  icon={option.icon} // Assuming you might want to add icons later
-                />
-
-                {index < menuOptions.length - 1 && <Separator className="" />}
-              </>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-    </section>
-  );
+    <Menubar className="shadow-none w-full self-end">
+        {menuOptions.map((option, index) => (
+          <MenubarMenu key={index}>
+            <MenubarTrigger className="flex items-center gap-2 bg-black/5 hover:bg-black/10 text-sm cursor-pointer">
+              {option.icon}
+              {option.label}
+            </MenubarTrigger>
+            <MenubarContent>
+              <MenubarItem>
+                <div className="flex flex-col">
+                  <span className="font-medium">{option.label}</span>
+                  <span className="text-sm text-muted-foreground">{option.description}</span>
+                </div>
+              </MenubarItem>
+            </MenubarContent>
+          </MenubarMenu>
+        ))}
+      </Menubar>
+  )
 }

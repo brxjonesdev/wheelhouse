@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { useParams } from 'next/navigation';
-import Collage from './components/collage';
+import Collage from './components/menu';
 import AboutUser from './components/about-user';
 import EditorsPicks from './components/editors-picks';
 import Crates from './components/crates';

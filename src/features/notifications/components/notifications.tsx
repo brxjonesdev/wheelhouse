@@ -9,7 +9,7 @@ import React from 'react';
 export default function Notifications() {
   const notifications = [];
   return (
-    <Card className="shadow-none flex flex-col w-sm p-4 gap-4 max-h-96">
+    <Card className="shadow-none flex flex-col w-sm p-4 gap-4 max-h-96 flex-1">
       <CardHeader className="p-0 m-0 gap-0">
         <CardTitle className="text-lg font-medium">Notifications</CardTitle>
         <CardDescription className="text-xs text-gray-500 font-medium tracking-wide">
