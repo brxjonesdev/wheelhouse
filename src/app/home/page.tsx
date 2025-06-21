@@ -1,20 +1,17 @@
 'use client';
-import FeedDisplay from '@/app/home/components/feed-display';
-import Notifications from '@/features/notifications/components/notifications';
+import Onboarding from '@/features/onboarding/components/onboarding';
 import { useDefaultTabRedirect } from '@/utils/navigation';
-import Menu from './components/menu';
 
 export default function Homepage() {
   useDefaultTabRedirect('feed');
+  const show = false; 
 
   return (
     <main className="flex-1 flex w-full">
-      <section className="w-full max-w-6xl mx-auto space-y-10 flex flex-col min-h-full pb-4 ">
-        <div className="flex flex-col md:flex-row flex-1 gap-4 pb-2 w-full p-4 lg:p-0">
-          <Menu />
-          <FeedDisplay />
-        </div>
-      </section>
+      <Onboarding show={show}/>
+      <p className="hidden md:block w-1/4">
+      home page
+      </p>
     </main>
   );
-}0-9
+}

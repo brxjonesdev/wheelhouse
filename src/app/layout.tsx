@@ -1,18 +1,18 @@
 import type { Metadata } from 'next';
-import { Manrope, Unica_One } from 'next/font/google';
+import {  Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import QueryProvider from '@/shared/util/QueryProvider';
 import AppHeader from '@/features/auth/components/app-header';
 
-const manrope = Manrope({
-  variable: '--font-manrope',
+
+const geist = Geist({
+  variable: '--font-geist',
   subsets: ['latin'],
 });
 
-const unicaOne = Unica_One({
-  variable: '--font-unica',
+const geistMono = Geist_Mono({
+  variable: '--font-geist-mono',
   subsets: ['latin'],
-  weight: '400',
 });
 
 export const metadata: Metadata = {
@@ -28,10 +28,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${manrope.variable}
-  ${unicaOne.variable} 
+        className={`
+  ${geist.variable}
+  ${geistMono.variable}
+    
          antialiased
-         font-body
+         font-geist
          min-h-dvh
          flex
           flex-col

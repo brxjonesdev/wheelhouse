@@ -14,7 +14,7 @@ export default function Component() {
   const [isPrivate, setIsPrivate] = useState(false)
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background font-sans">
       <div className="container max-w-6xl mx-auto py-8 px-4">
         <div className="space-y-6">
           {/* Header */}

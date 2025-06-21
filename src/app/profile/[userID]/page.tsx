@@ -6,6 +6,7 @@ import AboutUser from './components/about-user';
 import EditorsPicks from './components/editors-picks';
 import Crates from './components/crates';
 import Playlists from './components/playlists';
+import Likes from './components/likes';
 
 export default function Profile() {
   const params = useParams();
@@ -16,6 +17,7 @@ export default function Profile() {
       <section className="px-4 max-w-6xl mx-auto space-y-6">
         <Collage />
         <AboutUser userID={params.userID as string} />
+        <Likes/>
         <EditorsPicks />
         <Crates />
         <Playlists />

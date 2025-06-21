@@ -1,18 +1,14 @@
 import { Avatar, AvatarFallback, AvatarImage } from '@/shared/components/shadcn/avatar';
 import React from 'react';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/shared/components/shadcn/popover';
 import { Button } from '@/shared/components/shadcn/button';
 import { Card, CardTitle } from '@/shared/components/shadcn/card';
-import { Edit2, Mail, Edit3 } from 'lucide-react';
+import { Edit2 } from 'lucide-react';
 
 export default function AboutUser({ userID }: { userID: string }) {
+  console.log('User ID in AboutUser:', userID);
   // This comp shows the user
   return (
-    <section className="flex gap-2 flex-col border-b-1 border-black/5 pb-4 mb-4 bg-white">
+    <section className="flex gap-2 flex-col border-b-1 border-black/5 pb-4 mb-4 bg-white font-sans tracking-wide">
       <div className="flex items-center gap-4 lg:gap-6 ">
         <Avatar className="h-full w-full lg:max-h-[100px] lg:max-w-[100px] max-h-[50px] max-w-[50px] rounded-lg">
           <AvatarImage
@@ -47,21 +43,7 @@ export default function AboutUser({ userID }: { userID: string }) {
           velit ex. Mauris dapibus risus quis suscipit vulputate.
         </p>
       </div>
-      <div className=" w-fit border-1 border-black/5 p-2 rounded-sm flex items-center gap-2 lg:gap-4 mt-2 lg:mt-0 ml-auto">
-        <Popover>
-          <PopoverTrigger asChild>
-            <Button variant={'outline'} className="w-fit shadow-none">
-              <Mail /> Send Reccomendation
-            </Button>
-          </PopoverTrigger>
-          <PopoverContent>Place content for the popover here.</PopoverContent>
-        </Popover>
-        <Button variant="outline" className="shadow-none">
-          {' '}
-          <Edit3 className="text-muted-foreground" />
-          Compare
-        </Button>
-      </div>
+     
     </section>
   );
 }
